@@ -137,13 +137,36 @@ function handleKeyUp(e){
             break;
         case SPACE_KEY:
             playFire();
+			playFire2();
+			playFire3();
     }
 }
 function playFire(){
     if(fireAble){
     var fire = new createjs.Shape();
-    fire.graphics.beginFill("#FF0").drawRect(0,0,2,5).endFill();
+    fire.graphics.beginFill("#00FF00").drawRect(0,0,5,10).endFill();
     fire.x = player.x + 18;
+    fire.y = 658;
+    cjs.Sound.play("shot");
+    fires.push(fire);
+    stg.addChild(fire);}
+}
+function playFire2(){
+    if(fireAble){
+    var fire = new createjs.Shape();
+    fire.graphics.beginFill("#00FF00").drawRect(0,0,5,10).endFill();
+    fire.x = player.x + 9;
+    fire.y = 658;
+    cjs.Sound.play("shot");
+    fires.push(fire);
+    stg.addChild(fire);}
+}
+
+function playFire3(){
+    if(fireAble){
+    var fire = new createjs.Shape();
+    fire.graphics.beginFill("#00FF00").drawRect(0,0,5,10).endFill();
+    fire.x = player.x + 27;
     fire.y = 658;
     cjs.Sound.play("shot");
     fires.push(fire);

@@ -137,18 +137,21 @@ function handleKeyUp(e){
             break;
         case SPACE_KEY:
             playFire();
+			playFire2();
+			playFire3();
     }
 }
 function playFire(){
     if(fireAble){
     var fire = new createjs.Shape();
-    fire.graphics.beginFill("#FF0000").drawRect(0,0,2,5).endFill();
+    fire.graphics.beginFill("#FF0000").drawRect(0,0,10,15).endFill();
     fire.x = player.x + 18;
     fire.y = 658;
     cjs.Sound.play("shot");
     fires.push(fire);
     stg.addChild(fire);}
 }
+
 
 
 function buildMsg(){
