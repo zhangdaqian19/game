@@ -220,11 +220,11 @@ function buildEnemis() {
 
         en3 = en.clone();
 
-        en3.x = 200;
+        en3.x = 300;
         en3.y = -50;
 
         enemy.push(en3);
-        cjs.Tween.get(en3).wait(3000 * i).to({ x: 500, y: 1000 }, 2000, cjs.Ease.sineInOut(-2))
+        cjs.Tween.get(en3).wait(3000 * i).to({ x: 200, y: 1000 }, 2000, cjs.Ease.sineInOut(-2))
         stg.addChild(en3);
 
         en4 = enemyClip[i].clone();
